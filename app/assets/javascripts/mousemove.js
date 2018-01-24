@@ -6,7 +6,7 @@ window.onload = function() {
   document.body.addEventListener("mousemove", function(e){
     var x = e.offsetX;
     var y = e.offsetY;
-    console.log(`x座標: ${x}, y座標: ${y}`);
+    console.log("x座標: ${x}, y座標: ${y}");
     var maxY = document.getElementById('box').clientHeight -1;
     console.log(maxY);
     var unitY = Math.floor((256/maxY)*100);

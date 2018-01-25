@@ -1,25 +1,28 @@
-function $(id) {
-  return document.getElementById(id);
-}
+var doc = window.document;
+window.alert(doc);
 
-window.onload = function() {
-  document.body.addEventListener("mousemove", function(e){
-    var x = e.offsetX;
-    var y = e.offsetY;
-    console.log(`x座標: ${x}, y座標: ${y}`);
-    var maxY = document.getElementById('box').clientHeight -1;
-    console.log(maxY);
-    var unitY = Math.floor((256/maxY)*100);
-    var tenR = Math.floor((unitY * y)/100);
+// function $(id) {
+//   return document.getElementById(id);
+// }
 
-    var hexR = tenR.toString(16); if(tenR <= 15) { hexR = '0' + hexR; }
-    var hexG = "00";
-    var hexB = "00";
+// window.onload = function() {
+//   document.body.addEventListener("mousemove", function(e){
+//     var x = e.offsetX;
+//     var y = e.offsetY;
+//     console.log(`x座標: ${x}, y座標: ${y}`);
+//     var maxY = document.getElementById('box').clientHeight -1;
+//     console.log(maxY);
+//     var unitY = Math.floor((256/maxY)*100);
+//     var tenR = Math.floor((unitY * y)/100);
 
-  var displayColour = '#' + hexR + hexG + hexB;
-  document.body.style.backgroundColor = $('colour').innerHTML = $colour = displayColour;
-  });
-}
+//     var hexR = tenR.toString(16); if(tenR <= 15) { hexR = '0' + hexR; }
+//     var hexG = "00";
+//     var hexB = "00";
+
+//   var displayColour = '#' + hexR + hexG + hexB;
+//   document.body.style.backgroundColor = $('colour').innerHTML = $colour = displayColour;
+//   });
+// }
 
 
 
